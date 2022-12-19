@@ -2,11 +2,15 @@
   "name": "drill",
   "version": "1.0.0",
   "description": "Drill",
+  "homepage": "https://darkeden48.github.io/Drill",
   "main": "findOdd.js",
   "scripts": {
     "start": "webpack",
     "dev": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,11 +22,11 @@
   "bugs": {
     "url": "https://github.com/darkeden48/Drill/issues"
   },
-  "homepage": "https://github.com/darkeden48/Drill#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.0",
     "css-loader": "^6.7.3",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
